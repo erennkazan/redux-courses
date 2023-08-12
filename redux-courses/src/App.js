@@ -1,9 +1,16 @@
 import './App.css';
+import CourseForm from './components/CourseForm';
+import CourseList from './components/CourseList';
+import CourseSearch from './components/CourseSearch';
+import CourseValue from './components/CourseValue';
 
 function App() {
   return (
-    <div className="App">
-      asd
+    <div className="container is-fluid">
+      <CourseForm/>
+      <CourseSearch/>
+      <CourseList/>
+      <CourseValue/>
     </div>
   );
 }
