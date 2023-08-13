@@ -1,7 +1,11 @@
 import React from 'react';
 import { useSelector,useDispatch } from 'react-redux';
-import { changeName,changeCost,changeDescription } from '../store/slices/formSlice';
-
+import { 
+  changeName,
+  changeCost,
+  changeDescription 
+} from '../store/slices/formSlice';
+import { addCourse } from '../store/slices/courseSlice';
 function CourseForm() {
   const dispatch = useDispatch();
   const { name, description, cost } = useSelector((state) => {
@@ -14,6 +18,8 @@ function CourseForm() {
 
     const handleSubmit= (event)=>{
       event.preventDefault();
+      dispatch(addCourse({name,description,cost}));
+      
   }
 
   console.log(name, description, cost);
