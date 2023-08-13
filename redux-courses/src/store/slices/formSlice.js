@@ -8,7 +8,7 @@ const formSlice = createSlice({
        cost:0,
    },
    reducers:{
-   
+     name:'',
    }
 });
 
